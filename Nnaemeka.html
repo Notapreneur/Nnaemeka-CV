@@ -8,6 +8,7 @@
         
         <!--Main css-->
         <link rel="stylesheet" href="style.css">
+        <script src="validation.js" ></script>
         <title>Nnaemeka Agwu | CV</title>
     </head>
     <body>
@@ -33,7 +34,36 @@
                     <a href="https://twitter.com/Notapreneur"><img src="img/697029-twitter-512.png" alt="Twitter Profile" ></a>
                 </div>
             </div>
+
             <a href="img/Nnaemeka Agwu (CV) (1).pdf" class="btn">Download CV</a>
+
+            <div class="form">
+                <h4 class="form-heading">Contact Me</h4>
+                <div class="form-content">
+                    <form name="contactForm" onsubmit="return validateForm()" action="confirmation.php" method="post">
+                        <div class="row">
+                            Name: <br> <input type="text" name="name"> <br>
+                            <div class="error" id="nameErr"></div>
+                        </div>
+                        <div class="row">
+                            Email: <br> <input type="text" name="email"> <br>
+                            <div class="error" id="emailErr"></div>
+                        </div>
+                        <div class="row">
+                            Title: <br> <input type="text" name="title"> <br>
+                            <div class="error" id="titleErr"></div>
+                        </div>
+                        <div class="row">
+                            Message: <br> <textarea name="message" rows="5" cols="30"></textarea> <br>
+                            <div class="error" id="messageErr"></div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit" id="submit">
+                            <div class="error" id="submitErr"></div>
+                        </div>     
+                    </form>
+                </div>
+            </div>
         </div>
         <!--VERTICAL LINE-->
         <div class="vertical-line"></div>
@@ -104,7 +134,7 @@
         <footer>
                 <div class="horizontal-line"></div>
         </footer>  
-
+        
     </body>
-
+    
 </html>
